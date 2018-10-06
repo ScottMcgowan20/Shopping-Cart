@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+}
+.ShoppingCartHeader {
+    text-align: right;
+    padding-right: 1rem;
+}
+.ExcellaLogo {
+    text-align: center;
+}
+.ShirtSection {
+    display: inline-block;
+}
+.ShirtPicture {
+    float: left;
+    height: 20rem;
+    length: 20rem;
+}
+.ShirtInfo {
+    text-align: center;
+}
