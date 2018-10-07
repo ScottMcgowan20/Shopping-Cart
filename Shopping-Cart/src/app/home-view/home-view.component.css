@@ -2,11 +2,12 @@ h1 {
     text-align: center;
 }
 .ShoppingCartHeader {
-    text-align: right;
+    float: right;
     padding-right: 1rem;
 }
 .ExcellaLogo {
     text-align: center;
+    height: 75%;
 }
 .ShirtSection {
     display: inline-block;
@@ -14,11 +15,14 @@ h1 {
 .ShirtPicture {
     float: left;
     height: 20rem;
-    length: 20rem;
+    width: 20rem;
 }
 .ShirtInfo {
     text-align: center;
 }
 .shirtQuantity {
     padding: 1rem;
+}
+.header {
+    display: inline-block;
 }

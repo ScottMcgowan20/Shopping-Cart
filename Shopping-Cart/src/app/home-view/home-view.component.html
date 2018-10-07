@@ -1,13 +1,14 @@
-<div class="ShoppingCartHeader">
-  <p><b>My Shopping Cart</b></p>
-  <p><b>Number of Shirts in cart: {{this.numShirts}}</b></p>
-  <p>numSelected: {{this.numShirtsSelected}}</p>
+<div class="Header">
+  <div class="ShoppingCartHeader">
+    <button (click)="cartToggle()">My Shopping Cart</button>
+    <div *ngIf="showCart">
+      <app-cart-view [numShirts]=numShirts></app-cart-view>
+    </div>
+  </div>
+  <div class="ExcellaLogo">
+    <img src="https://media.glassdoor.com/sqll/241645/excella-consulting-squarelogo-1516585675987.png">
+  </div>
 </div>
-
-<div class="ExcellaLogo">
-  <img src="https://media.glassdoor.com/sqll/241645/excella-consulting-squarelogo-1516585675987.png">
-</div>
-
 <h1><u><b>Welcome to the Excella Online Store!</b></u></h1>
 
 <hr>

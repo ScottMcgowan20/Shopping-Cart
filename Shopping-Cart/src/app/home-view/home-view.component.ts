@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home-view',
@@ -7,14 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeViewComponent implements OnInit {
 
-  numShirts;
-  numShirtsSelected ;
+
+  numShirts: number;
+  numShirtsSelected: number; 
+  showCart: boolean; 
+
+
   constructor() {
     this.numShirts = 0;
     this.numShirtsSelected = 1;
+    this.showCart = false;
    }
 
   ngOnInit() {
+  }
+
+  cartToggle() {
+    this.showCart = !this.showCart;
   }
 
   addShirt() {
