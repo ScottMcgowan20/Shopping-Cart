@@ -19,3 +19,6 @@ h1 {
 .ShirtInfo {
     text-align: center;
 }
+.shirtQuantity {
+    padding: 1rem;
+}

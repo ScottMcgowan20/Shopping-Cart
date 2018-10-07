@@ -1,5 +1,7 @@
 <div class="ShoppingCartHeader">
   <p><b>My Shopping Cart</b></p>
+  <p><b>Number of Shirts in cart: {{this.numShirts}}</b></p>
+  <p>numSelected: {{this.numShirtsSelected}}</p>
 </div>
 
 <div class="ExcellaLogo">
@@ -15,5 +17,10 @@
   <div class="ShirtInfo">
     <p><b>Classic Polo</b></p>
     <p><b>$20.00</b></p>
+    <button (click)="addShirt()">Add to Cart</button>
+    <br>
+    <div class = "shirtQuantity">
+      <input type="number" value="1" name="quantity" min="0" max="20" (change)="updateQuantity($event)">
+    </div>
   </div>
 </div>

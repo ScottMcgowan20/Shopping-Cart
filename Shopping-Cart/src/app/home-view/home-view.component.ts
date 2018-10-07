@@ -8,12 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class HomeViewComponent implements OnInit {
 
   numShirts;
-
+  numShirtsSelected ;
   constructor() {
     this.numShirts = 0;
+    this.numShirtsSelected = 1;
    }
 
   ngOnInit() {
   }
 
+  addShirt() {
+    this.numShirts = this.numShirts + this.numShirtsSelected;
+  }
+
+  updateQuantity(event: any) {
+    this.numShirtsSelected = parseInt(event.target.value);
+  }
 }
