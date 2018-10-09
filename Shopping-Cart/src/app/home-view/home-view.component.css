@@ -9,20 +9,20 @@ h1 {
     text-align: center;
     height: 75%;
 }
-.ShirtSection {
+.ItemSection {
     display: inline-block;
+    padding: 5rem;
 }
-.ShirtPicture {
-    float: left;
+.ItemPicture {
     height: 20rem;
     width: 20rem;
 }
-.ShirtInfo {
+.ItemInfo {
     text-align: center;
 }
-.shirtQuantity {
+.ItemQuantity {
     padding: 1rem;
 }
 .header {
-    display: inline-block;
+    display: inline-flex;
 }

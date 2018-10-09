@@ -1,3 +1,14 @@
 <div class="ShoppingCart">
-  <p>{{this.numShirts}}</p>
+  <div *ngIf="!containsItems">
+    <p>No items in cart!</p>
+  </div>
+  <div *ngIf ="containsItems">
+    <div *ngFor = "let item of items">
+      <div *ngIf = "item.amount != 0">
+          <p>{{item.name}} : {{item.amount}} at ${{item.price}} each</p>
+      </div>
+    </div>
+    <p>Total is: ${{totalCost}}</p>
+    <a routerLink='view-cart'>View and Edit</a>
+  </div>
 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { shoppingItem } from '../models/shoppingItem';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-cart-view',
@@ -7,9 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CartViewComponent implements OnInit {
 
-  @Input() numShirts: number;
+  @Input() items: shoppingItem[];
+  @Input() containsItems: boolean;
+  @Input() totalCost: number;
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
   }
