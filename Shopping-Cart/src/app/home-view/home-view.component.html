@@ -2,7 +2,8 @@
   <div class="ShoppingCartHeader">
     <button (click)="cartToggle()">My Shopping Cart</button>
     <div *ngIf="showCart">
-      <app-cart-view [items]=items [containsItems]=containsItems [totalCost]=totalCost></app-cart-view>
+      <app-cart-view [items]=items [containsItems]=containsItems [totalCost]=totalCost
+      (itemsSentOut)="updateItems($event)" (costSentOut)="updateCost($event)" (containsSentOut)="updateContains($event)"></app-cart-view>
     </div>
   </div>
   <div class="ExcellaLogo">
@@ -38,3 +39,55 @@
         </div>
       </div>
   </div>
+  <div class = "ItemSection">
+    <img class="ItemPicture" src="https://www.rainbowsandals.com/images/items/Large/3-MOCH.jpg">
+    <div class="ItemInfo">
+      <p><b>Rainbow Flip</b></p>
+      <p><b>$40.00</b></p>
+      <button (click)="addItemToCart(2)">Add to Cart</button>
+      <br>
+      <div class = "ItemQuantity">
+        <input type="number" value="1" name="quantity" min="0" max="20" (change)="updateQuantity($event, 2)">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Items">
+  <div class = "ItemSection">
+    <img class="ItemPicture" src="https://dsw.scene7.com/is/image/DSWShoes/392260_001_ss_01?$pdp-image$">
+    <div class="ItemInfo">
+      <p><b>Running Shoes</b></p>
+      <p><b>$60.00</b></p>
+      <button (click)="addItemToCart(3)">Add to Cart</button>
+      <br>
+      <div class = "ItemQuantity">
+        <input type="number" value="1" name="quantity" min="0" max="20" (change)="updateQuantity($event, 3)">
+      </div>
+    </div>
+  </div>
+  <div class = "ItemSection">
+      <img class="ItemPicture" src="https://images-na.ssl-images-amazon.com/images/I/71ats%2B57GDL._SL1500_.jpg">
+      <div class="ItemInfo">
+        <p><b>4x4 Rubiks Cube</b></p>
+        <p><b>$25.00</b></p>
+        <button (click)="addItemToCart(4)">Add to Cart</button>
+        <br>
+        <div class = "ItemQuantity">
+          <input type="number" value="1" name="quantity" min="0" max="20" (change)="updateQuantity($event, 4)">
+        </div>
+      </div>
+  </div>
+  <div class = "ItemSection">
+    <img class="ItemPicture" src="https://fanatics.frgimages.com/FFImage/thumb.aspx?i=/productimages/_1697000/ff_1697538_xl.jpg&w=340">
+    <div class="ItemInfo">
+      <p><b>Eagles Sweatshirt</b></p>
+      <p><b>$45.00</b></p>
+      <button (click)="addItemToCart(5)">Add to Cart</button>
+      <br>
+      <div class = "ItemQuantity">
+        <input type="number" value="1" name="quantity" min="0" max="20" (change)="updateQuantity($event, 5)">
+      </div>
+    </div>
+  </div>
+</div>

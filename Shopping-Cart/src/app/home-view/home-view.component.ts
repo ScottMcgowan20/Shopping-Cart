@@ -13,9 +13,9 @@ export class HomeViewComponent implements OnInit {
 
   showCart: boolean;
   items: shoppingItem[];
-  itemNames: String[] = ['Classic Polo', 'Rubiks Cube'];
-  itemPrices: number[] = [20.00, 10.00];
-  itemQuantities: number[] = [1, 1];
+  itemNames: String[] = ['Classic Polo', 'Rubiks Cube', 'Flip Flops', 'Running Shoes', '4x4 Rubiks Cube', 'Eagles Sweatshirt'];
+  itemPrices: number[] = [20.00, 10.00, 40.00, 60.00, 25.00, 45.00];
+  itemQuantities: number[] = [1, 1, 1, 1, 1, 1];
   containsItems: boolean;
   totalCost: number;
 
@@ -43,9 +43,22 @@ export class HomeViewComponent implements OnInit {
     this.itemQuantities[index] = parseInt(event.target.value);
   }
 
+  updateItems(itemsSentOut) {
+    this.items = itemsSentOut;
+  }
+
+  updateCost(inCost) {
+    this.totalCost = inCost
+  }
+
+  updateContains(inContains) {
+    this.containsItems = inContains;
+  }
+
   addItemToCart(index: number) {
     this.containsItems = true;
     this.items[index].amount += this.itemQuantities[index];
     this.totalCost += this.itemPrices[index] * this.itemQuantities[index];
+    alert('Item(s) added to cart');
   }
 }

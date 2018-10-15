@@ -5,10 +5,9 @@
   <div *ngIf ="containsItems">
     <div *ngFor = "let item of items">
       <div *ngIf = "item.amount != 0">
-          <p>{{item.name}} : {{item.amount}} at ${{item.price}} each</p>
+          <p>{{item.name}} : {{item.amount}} at ${{item.price}} each <button (click)="increment(item.name)">+</button> <button (click)="decrement(item.name)">-</button></p>
       </div>
     </div>
     <p>Total is: ${{totalCost}}</p>
-    <a routerLink='view-cart'>View and Edit</a>
   </div>
 </div>
