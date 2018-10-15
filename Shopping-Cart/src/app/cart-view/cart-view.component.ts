@@ -12,9 +12,9 @@ export class CartViewComponent implements OnInit {
   @Input() items: shoppingItem[];
   @Input() containsItems: boolean;
   @Input() totalCost: number;
-  @Output() itemsSentOut = new EventEmitter<shoppingItem[]>;
-  @Output() containsSentOut = new EventEmitter<boolean>;
-  @Output() costSentOut = new EventEmitter<number>;
+  @Output() itemsSentOut: EventEmitter<shoppingItem[]> = new EventEmitter();
+  @Output() containsSentOut: EventEmitter<boolean> = new EventEmitter();
+  @Output() costSentOut: EventEmitter<number> = new EventEmitter();
 
 
   constructor() {
